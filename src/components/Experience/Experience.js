@@ -41,10 +41,8 @@ const Wrapper = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 
-  /* padding-left: 160px;
-  padding-right: 160px; */
-
   margin-top: 70px;
+  margin-bottom: 80px;
 `;
 
 const Heading = styled.h2`

@@ -52,9 +52,8 @@ function Header() {
             "Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love."
           }
         </Intro>
-        <Link href="/">Contact me</Link>
+        <Button>Contact me</Button>
       </Hero>
-      {/* <hr /> */}
     </Wrapper>
   );
 }
@@ -62,9 +61,6 @@ function Header() {
 const Wrapper = styled.header`
   grid-area: header;
   background-color: var(--black);
-  /* padding-left: 160px;
-  padding-right: 160px;
-  padding-top: 40px; */
   position: relative;
   border-bottom: 1px solid var(--white);
 `;
@@ -120,12 +116,16 @@ const Intro = styled.p`
   max-width: 450px;
 `;
 
-const Link = styled.a`
+const Button = styled.button`
   font-size: var(--font-size-text-medium);
   font-weight: var(--font-weight-bold);
-  text-decoration: none;
   color: var(--white);
   text-transform: uppercase;
+  letter-spacing: 2px;
+
+  border: none;
+  padding: 0;
+  background-color: transparent;
   border-bottom: 2px solid var(--green);
 `;
 
