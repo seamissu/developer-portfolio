@@ -1,7 +1,10 @@
-import { Inter } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import StyledComponentsRegistry from './registry';
 
-const inter = Inter({ subsets: ['latin'] });
+const spacegrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'developer portfolio',
@@ -9,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={spacegrotesk.className}>
       <body>
         <StyledComponentsRegistry>
           {children}

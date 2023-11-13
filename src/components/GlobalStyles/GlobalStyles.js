@@ -44,6 +44,16 @@ h6 {
 #__next {
   isolation: isolate;
 }
-`;
+
+:root {
+  --black: hsl(0deg 0% 8%);
+  --green: hsl(153deg 71% 59%);
+  --dark-gray: hsl(0deg 0% 14%);
+  --gray: hsl(0deg 0% 85%);
+  --white: hsl(0deg 0% 100%);
+
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+}`;
 
 export default GlobalStyles;

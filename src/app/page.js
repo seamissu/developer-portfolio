@@ -1,14 +1,15 @@
 'use client';
 
-import Image from 'next/image';
 import styled from 'styled-components';
 import GlobalStyles from '@/components/GlobalStyles';
+
+import Header from '@/components/Header';
 
 export default function Home() {
   return (
     <>
       <Wrapper>
-        <header>header</header>
+        <Header />
         <section>experience</section>
         <main>projects</main>
         <div>form</div>
@@ -29,7 +30,7 @@ const Wrapper = styled.div`
     'projects'
     'form'
     'footer';
-  grid-template-columns: 820px 320px 1800px 500px 180px;
+  grid-template-rows: 820px 320px 1800px 500px 180px;
 
   & > header,
   & > section,
@@ -39,9 +40,6 @@ const Wrapper = styled.div`
     border: 2px solid black;
   }
 
-  & > header {
-    grid-area: header;
-  }
   & > section {
     grid-area: experience;
   }
