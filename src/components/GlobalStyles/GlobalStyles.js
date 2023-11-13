@@ -54,6 +54,13 @@ h6 {
 
   --font-weight-bold: 700;
   --font-weight-medium: 500;
+
+  --font-size-heading-extra-large: 88px;
+  --font-size-heading-large: 48px;
+  --font-size-heading-medium: 24px;
+
+  --font-size-text-large: 18px;
+  --font-size-text-medium: 16px;
 }`;
 
 export default GlobalStyles;
