@@ -7,7 +7,7 @@ function Header() {
   return (
     <Wrapper>
       <Image
-        style={{ position: 'absolute', top: '0px', right: '160px' }}
+        style={{ position: 'absolute', top: '0px', right: '0px' }}
         src="/images/image-profile-desktop.webp"
         alt="profile image"
         height={720}
@@ -62,10 +62,11 @@ function Header() {
 const Wrapper = styled.header`
   grid-area: header;
   background-color: var(--black);
-  padding-left: 160px;
+  /* padding-left: 160px;
   padding-right: 160px;
-  padding-top: 40px;
+  padding-top: 40px; */
   position: relative;
+  border-bottom: 1px solid var(--white);
 `;
 
 const Superheader = styled.nav`
