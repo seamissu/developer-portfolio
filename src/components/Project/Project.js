@@ -129,6 +129,8 @@ const Wrapper = styled.main`
     'project';
   grid-template-rows: 90px 1fr;
   gap: 80px;
+
+  margin-bottom: 80px;
 `;
 
 const Title = styled.div`
