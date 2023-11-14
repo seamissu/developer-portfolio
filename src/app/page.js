@@ -31,6 +31,7 @@ const Wrapper = styled.div`
   display: grid;
   min-height: 100%;
   background-color: var(--black);
+  overflow: hidden;
 
   grid-template-areas:
     'header'
@@ -49,7 +50,7 @@ const Wrapper = styled.div`
     padding-right: 30px;
     padding-top: 30px;
 
-    grid-template-rows: 650px 500px 1fr 650px 120px;
+    grid-template-rows: 650px 560px 1fr 650px 120px;
   }
 
   & > header {

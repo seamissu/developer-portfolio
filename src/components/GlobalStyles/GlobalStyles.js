@@ -111,6 +111,18 @@ h6 {
   }
 }
 
+.rings.experience {
+  position: absolute;
+  right: -380px;
+  bottom: -50px;
+}
+
+@media ${QUERIES.tabletAndDown} {
+  .rings.experience {
+    right: -380px;
+    bottom: -65px;
+  }
+}
 
 
 

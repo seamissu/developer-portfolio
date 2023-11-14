@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { QUERIES } from '@/app/constants';
+
 function Experience() {
   return (
     <Wrapper>
@@ -30,11 +32,7 @@ function Experience() {
         <Duration>3 Years Experience</Duration>
       </article>
       <Image
-        style={{
-          position: 'absolute',
-          right: '-380px',
-          bottom: '-50px',
-        }}
+        className="rings experience"
         src="/images/pattern-rings.svg"
         alt="decorative pattern"
         width={530}
@@ -52,6 +50,12 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+
+  @media ${QUERIES.tabletAndDown} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+  }
 
   margin-top: 70px;
   margin-bottom: 80px;
