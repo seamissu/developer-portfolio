@@ -31,11 +31,7 @@ function ContactForm() {
         <Button>Send message</Button>
       </Form>
       <Image
-        style={{
-          position: 'absolute',
-          left: '-200px',
-          bottom: '50px',
-        }}
+        className="rings contactform"
         src="/images/pattern-rings.svg"
         alt="decorative pattern"
         width={530}
@@ -65,8 +61,13 @@ const Wrapper = styled.div`
   @media ${QUERIES.tabletAndDown} {
     margin-left: -30px;
     margin-right: -30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 140px;
+    padding-right: 140px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 1fr;
+    gap: 10px;
+    align-content: revert;
   }
 
   position: relative;
@@ -75,6 +76,10 @@ const Wrapper = styled.div`
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${QUERIES.tabletAndDown} {
+    align-items: center;
+  }
 `;
 
 const Heading = styled.h1`
@@ -82,6 +87,10 @@ const Heading = styled.h1`
   font-weight: var(--font-weight-bold);
   color: var(--white);
   letter-spacing: -2.5px;
+
+  @media ${QUERIES.tabletAndDown} {
+    font-size: 72px;
+  }
 `;
 
 const Prompt = styled.p`
@@ -90,6 +99,10 @@ const Prompt = styled.p`
   color: var(--gray);
   line-height: 28px;
   max-width: 445px;
+
+  @media ${QUERIES.tabletAndDown} {
+    text-align: center;
+  }
 `;
 
 const Form = styled.form`

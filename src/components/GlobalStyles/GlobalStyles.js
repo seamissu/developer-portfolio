@@ -124,6 +124,19 @@ h6 {
   }
 }
 
+.rings.contactform {
+  position: absolute;
+  left: -200px;
+  bottom: 50px;
+}
+
+@media ${QUERIES.tabletAndDown} {
+  .rings.contactform {
+    left: -360px;
+    bottom: 25px;
+  }
+}
+
 
 
 :root {
@@ -142,10 +155,6 @@ h6 {
 
   --font-size-text-large: 18px;
   --font-size-text-medium: 16px;
-
-  --padding-desktop: 160px;
-  --padding-tablet: 30px;
-
 }`;
 
 export default GlobalStyles;

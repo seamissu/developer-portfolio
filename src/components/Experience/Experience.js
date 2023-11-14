@@ -54,7 +54,7 @@ const Wrapper = styled.section`
   @media ${QUERIES.tabletAndDown} {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 50px;
+    gap: 50px 10px;
   }
 
   margin-top: 70px;
@@ -67,6 +67,10 @@ const Heading = styled.h2`
   font-size: var(--font-size-heading-large);
   font-weight: var(--font-weight-bold);
   letter-spacing: -1.5px;
+
+  @media ${QUERIES.tabletAndDown} {
+    font-size: 40px;
+  }
 `;
 
 const Duration = styled.p`

@@ -320,6 +320,7 @@ const Anchor = styled.a`
   letter-spacing: 2px;
   padding-bottom: 6px;
   margin-right: 18px;
+  line-height: 2.5;
 
   &:hover {
     color: var(--green);

@@ -50,9 +50,10 @@ const Wrapper = styled.div`
     padding-right: 30px;
     padding-top: 30px;
 
-    grid-template-rows: 650px 560px 1fr 650px 120px;
+    grid-template-rows: 650px 560px 1fr 750px 120px;
   }
 
+  // borders for development
   & > header {
     border: 2px solid red;
   }
