@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { QUERIES } from '@/app/constants';
+
 function Footer() {
   return (
     <Wrapper>
@@ -49,6 +51,13 @@ const Wrapper = styled.footer`
   margin-right: -160px;
   padding-left: 160px;
   padding-right: 160px;
+
+  @media ${QUERIES.tabletAndDown} {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   display: grid;
   grid-template-columns: 1fr;

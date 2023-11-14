@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { QUERIES } from '@/app/constants';
+
 function ContactForm() {
   return (
     <Wrapper>
@@ -55,10 +57,17 @@ const Wrapper = styled.div`
   padding-top: 50px;
   gap: 110px;
 
-  padding-left: 160px;
-  padding-right: 160px;
   margin-left: -160px;
   margin-right: -160px;
+  padding-left: 160px;
+  padding-right: 160px;
+
+  @media ${QUERIES.tabletAndDown} {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   position: relative;
 `;

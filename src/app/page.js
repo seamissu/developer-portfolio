@@ -9,6 +9,8 @@ import Project from '@/components/Project';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
+import { QUERIES } from './constants';
+
 export default function Home() {
   return (
     <>
@@ -41,6 +43,14 @@ const Wrapper = styled.div`
   padding-left: 160px;
   padding-right: 160px;
   padding-top: 40px;
+
+  @media ${QUERIES.tabletAndDown} {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+
+    grid-template-rows: 650px 500px 1fr 650px 120px;
+  }
 
   & > header {
     border: 2px solid red;

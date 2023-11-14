@@ -2,16 +2,31 @@ import React from 'react';
 import Image from 'next/image';
 
 import styled from 'styled-components';
+import { QUERIES } from '@/app/constants';
 
 function Header() {
   return (
     <Wrapper>
       <Image
-        style={{ position: 'absolute', top: '0px', right: '0px' }}
+        className="profile desktop"
         src="/images/image-profile-desktop.webp"
         alt="profile image"
         height={720}
         width={445}
+      />
+      <Image
+        className="profile tablet"
+        src="/images/image-profile-tablet.webp"
+        alt="profile image"
+        height={600}
+        width={322}
+      />
+      <Image
+        className="profile mobile"
+        src="/images/image-profile-mobile.webp"
+        alt="profile image"
+        height={383}
+        width={174}
       />
       <Superheader>
         <Logo>adamkeyes</Logo>
@@ -45,7 +60,10 @@ function Header() {
       </Superheader>
       <Hero>
         <HelloHeading>
-          {`Nice to meet you! I'm`} <Namespan>Adam Keyes</Namespan>.
+          {`Nice to`}
+          <span>
+            {` meet you! I'm`} <Namespan>Adam Keyes</Namespan>.
+          </span>
         </HelloHeading>
         <Intro>
           {
@@ -55,14 +73,17 @@ function Header() {
         <Button>Contact me</Button>
       </Hero>
       <Image
-        style={{
-          position: 'absolute',
-          right: '380px',
-          bottom: '170px',
-        }}
+        className="circle pattern"
         src="/images/pattern-circle.svg"
         alt="decorative pattern"
         width={129}
+        height={129}
+      />
+      <Image
+        className="rings header"
+        src="/images/pattern-rings.svg"
+        alt="decorative pattern"
+        width={530}
         height={129}
       />
     </Wrapper>
@@ -83,6 +104,11 @@ const Superheader = styled.nav`
   margin-bottom: 128px;
   position: relative;
   padding-right: 20px;
+
+  @media ${QUERIES.tabletAndDown} {
+    margin-bottom: 90px;
+    padding-right: revert;
+  }
 `;
 
 const Logo = styled.p`
@@ -104,6 +130,10 @@ const Hero = styled.div`
   align-items: flex-start;
   gap: 60px;
   position: relative;
+
+  @media ${QUERIES.tabletAndDown} {
+    gap: 34px;
+  }
 `;
 
 const HelloHeading = styled.h1`
@@ -113,6 +143,15 @@ const HelloHeading = styled.h1`
   line-height: 88px;
   max-width: 750px;
   letter-spacing: -2.5px;
+
+  @media ${QUERIES.tabletAndDown} {
+    font-size: 72px;
+    max-width: 440px;
+
+    & > span {
+      display: table;
+    }
+  }
 `;
 
 const Namespan = styled.span`

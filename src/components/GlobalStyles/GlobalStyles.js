@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { QUERIES } from '@/app/constants';
 
 const GlobalStyles = createGlobalStyle`
 *,
@@ -45,6 +46,74 @@ h6 {
   isolation: isolate;
 }
 
+
+.profile.desktop {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.profile.tablet {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.profile.mobile {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+@media ${QUERIES.tabletAndDown} {
+
+  .profile.desktop {
+    display: none;
+  }
+
+  .profile.tablet {
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+
+}
+
+.circle.pattern {
+  position: absolute;
+  right: 380px;
+  bottom: 170px
+}
+
+@media ${QUERIES.tabletAndDown} {
+  .circle.pattern {
+    right: -90px;
+    bottom: 75px;
+  }
+}
+
+
+.rings.header {
+  position: absolute;
+  left: -300px;
+  top: 100px;
+}
+
+@media ${QUERIES.tabletAndDown} {
+  .rings.header {
+    left: -300px;
+    top: 80px;
+  }
+}
+
+
+
+
 :root {
   --black: hsl(0deg 0% 8%);
   --green: hsl(153deg 71% 59%);
@@ -61,6 +130,10 @@ h6 {
 
   --font-size-text-large: 18px;
   --font-size-text-medium: 16px;
+
+  --padding-desktop: 160px;
+  --padding-tablet: 30px;
+
 }`;
 
 export default GlobalStyles;
