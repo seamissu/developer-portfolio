@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { QUERIES } from '@/app/constants';
+
 function Project() {
   return (
     <Wrapper>
@@ -30,6 +32,10 @@ function Project() {
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
           </Tags>
+          <Anchors>
+            <Anchor href="/">View project</Anchor>
+            <Anchor href="/">View code</Anchor>
+          </Anchors>
         </Article>
 
         <Article>
@@ -51,78 +57,114 @@ function Project() {
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
           </Tags>
+          <Anchors>
+            <Anchor href="/">View project</Anchor>
+            <Anchor href="/">View code</Anchor>
+          </Anchors>
         </Article>
 
         <Article>
-          <Image
-            style={{ width: '100%', height: 'auto' }}
-            alt=""
-            src="/images/thumbnail-project-3-large.webp"
-            width={540}
-            height={400}
-          />
+          <ImageWrapper>
+            <Image
+              style={{ width: '100%', height: 'auto' }}
+              alt=""
+              src="/images/thumbnail-project-3-large.webp"
+              width={540}
+              height={400}
+            />
+            <LinkPanel>
+              <Link href="/">View project</Link>
+              <Link href="/">View code</Link>
+            </LinkPanel>
+          </ImageWrapper>
           <Name>Todo web app</Name>
           <Tags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>JavaScript</Tag>
           </Tags>
-          <Link>View project</Link>
-          <Link>View code</Link>
+          <Anchors>
+            <Anchor href="/">View project</Anchor>
+            <Anchor href="/">View code</Anchor>
+          </Anchors>
         </Article>
 
         <Article>
-          <Image
-            style={{ width: '100%', height: 'auto' }}
-            alt=""
-            src="/images/thumbnail-project-4-large.webp"
-            width={540}
-            height={400}
-          />
+          <ImageWrapper>
+            <Image
+              style={{ width: '100%', height: 'auto' }}
+              alt=""
+              src="/images/thumbnail-project-4-large.webp"
+              width={540}
+              height={400}
+            />
+            <LinkPanel>
+              <Link href="/">View project</Link>
+              <Link href="/">View code</Link>
+            </LinkPanel>
+          </ImageWrapper>
           <Name>Entertainment web app</Name>
           <Tags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>JavaScript</Tag>
           </Tags>
-          <Link>View project</Link>
-          <Link>View code</Link>
+          <Anchors>
+            <Anchor href="/">View project</Anchor>
+            <Anchor href="/">View code</Anchor>
+          </Anchors>
         </Article>
 
         <Article>
-          <Image
-            style={{ width: '100%', height: 'auto' }}
-            alt=""
-            src="/images/thumbnail-project-5-large.webp"
-            width={540}
-            height={400}
-          />
+          <ImageWrapper>
+            <Image
+              style={{ width: '100%', height: 'auto' }}
+              alt=""
+              src="/images/thumbnail-project-5-large.webp"
+              width={540}
+              height={400}
+            />
+            <LinkPanel>
+              <Link href="/">View project</Link>
+              <Link href="/">View code</Link>
+            </LinkPanel>
+          </ImageWrapper>
           <Name>Memory Game</Name>
           <Tags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>JavaScript</Tag>
           </Tags>
-          <Link>View project</Link>
-          <Link>View code</Link>
+          <Anchors>
+            <Anchor href="/">View project</Anchor>
+            <Anchor href="/">View code</Anchor>
+          </Anchors>
         </Article>
 
         <Article>
-          <Image
-            style={{ width: '100%', height: 'auto' }}
-            alt=""
-            src="/images/thumbnail-project-6-large.webp"
-            width={540}
-            height={400}
-          />
+          <ImageWrapper>
+            <Image
+              style={{ width: '100%', height: 'auto' }}
+              alt=""
+              src="/images/thumbnail-project-6-large.webp"
+              width={540}
+              height={400}
+            />
+            <LinkPanel>
+              <Link href="/">View project</Link>
+              <Link href="/">View code</Link>
+            </LinkPanel>
+          </ImageWrapper>
           <Name>Art gallery showcase</Name>
           <Tags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>JavaScript</Tag>
           </Tags>
-          <Link href="/">View project</Link>
-          <Link href="/">View code</Link>
+          <Anchors>
+            <Anchor href="/">View project</Anchor>
+            <Anchor href="/">View code</Anchor>
+          </Anchors>
         </Article>
       </ProjectGrid>
     </Wrapper>
@@ -154,6 +196,10 @@ const Heading = styled.h1`
   font-size: var(--font-size-heading-extra-large);
   font-weight: var(--font-weight-bold);
   letter-spacing: -2.5px;
+
+  @media ${QUERIES.tabletAndDown} {
+    font-size: 72px;
+  }
 `;
 
 const Button = styled.button`
@@ -183,6 +229,10 @@ const ProjectGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 24px 48px;
+
+  @media ${QUERIES.tabletAndDown} {
+    gap: 60px 20px;
+  }
 `;
 
 const Article = styled.article`
@@ -194,33 +244,35 @@ const Article = styled.article`
 const ImageWrapper = styled.div`
   position: relative;
 
-  &:hover {
-    & > img {
-      opacity: 0.3;
-    }
+  @media (min-width: 1100px) {
+    &:hover {
+      & > img {
+        opacity: 0.3;
+      }
 
-    & > div {
-      display: revert;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      width: 160px;
-      height: 160px;
-      margin: auto;
+      & > div {
+        display: revert;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 160px;
+        height: 160px;
+        margin: auto;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
 
-    & > div > a {
-      display: revert;
-      text-align: center;
-      letter-spacing: 2px;
+      & > div > a {
+        display: revert;
+        text-align: center;
+        letter-spacing: 2px;
+      }
     }
   }
 `;
@@ -246,6 +298,35 @@ const Link = styled.a`
 
   &:hover {
     color: var(--green);
+  }
+`;
+
+const Anchors = styled.div`
+  display: none;
+
+  @media ${QUERIES.tabletAndDown} {
+    display: block;
+  }
+`;
+
+const Anchor = styled.a`
+  display: none;
+  text-decoration: none;
+  font-size: var(--font-size-text-medium);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--green);
+  color: var(--white);
+  letter-spacing: 2px;
+  padding-bottom: 6px;
+  margin-right: 18px;
+
+  &:hover {
+    color: var(--green);
+  }
+
+  @media ${QUERIES.tabletAndDown} {
+    display: revert;
   }
 `;
 
