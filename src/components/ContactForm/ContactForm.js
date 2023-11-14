@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 function ContactForm() {
   return (
@@ -27,6 +28,17 @@ function ContactForm() {
         </Label>
         <Button>Send message</Button>
       </Form>
+      <Image
+        style={{
+          position: 'absolute',
+          left: '-200px',
+          bottom: '50px',
+        }}
+        src="/images/pattern-rings.svg"
+        alt="decorative pattern"
+        width={530}
+        height={129}
+      />
     </Wrapper>
   );
 }
@@ -47,6 +59,8 @@ const Wrapper = styled.div`
   padding-right: 160px;
   margin-left: -160px;
   margin-right: -160px;
+
+  position: relative;
 `;
 
 const ContactInfo = styled.div`

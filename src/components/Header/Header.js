@@ -54,6 +54,17 @@ function Header() {
         </Intro>
         <Button>Contact me</Button>
       </Hero>
+      <Image
+        style={{
+          position: 'absolute',
+          right: '380px',
+          bottom: '170px',
+        }}
+        src="/images/pattern-circle.svg"
+        alt="decorative pattern"
+        width={129}
+        height={129}
+      />
     </Wrapper>
   );
 }

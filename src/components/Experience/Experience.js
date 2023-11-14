@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 function Experience() {
   return (
@@ -28,6 +29,17 @@ function Experience() {
         <Heading>Sass</Heading>
         <Duration>3 Years Experience</Duration>
       </article>
+      <Image
+        style={{
+          position: 'absolute',
+          right: '-380px',
+          bottom: '-50px',
+        }}
+        src="/images/pattern-rings.svg"
+        alt="decorative pattern"
+        width={530}
+        height={129}
+      />
     </Wrapper>
   );
 }
@@ -43,6 +55,8 @@ const Wrapper = styled.section`
 
   margin-top: 70px;
   margin-bottom: 80px;
+
+  position: relative;
 `;
 
 const Heading = styled.h2`
