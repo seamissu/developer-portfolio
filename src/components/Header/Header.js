@@ -127,6 +127,11 @@ const Button = styled.button`
   padding: 0;
   background-color: transparent;
   border-bottom: 2px solid var(--green);
+
+  &:hover {
+    color: var(--green);
+    cursor: pointer;
+  }
 `;
 
 export default Header;

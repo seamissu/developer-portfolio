@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   align-content: center;
 
   padding-top: 50px;
-  gap: 230px;
+  gap: 110px;
 
   padding-left: 160px;
   padding-right: 160px;
@@ -115,6 +115,11 @@ const Button = styled.button`
   letter-spacing: 2px;
   border-bottom: 2px solid var(--green);
   padding-bottom: 6px;
+
+  &:hover {
+    color: var(--green);
+    cursor: pointer;
+  }
 `;
 
 export default ContactForm;

@@ -11,37 +11,46 @@ function Project() {
       </Title>
       <ProjectGrid>
         <Article>
-          <Image
-            style={{ width: '100%', height: 'auto' }}
-            alt=""
-            src="/images/thumbnail-project-1-large.webp"
-            width={540}
-            height={400}
-          />
+          <ImageWrapper>
+            <Image
+              style={{ width: '100%', height: 'auto' }}
+              alt=""
+              src="/images/thumbnail-project-1-large.webp"
+              width={540}
+              height={400}
+            />
+            <LinkPanel>
+              <Link href="/">View project</Link>
+              <Link href="/">View code</Link>
+            </LinkPanel>
+          </ImageWrapper>
+
           <Name>Design portfolio</Name>
           <Tags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
           </Tags>
-          <Link>View project</Link>
-          <Link>View code</Link>
         </Article>
 
         <Article>
-          <Image
-            style={{ width: '100%', height: 'auto' }}
-            alt=""
-            src="/images/thumbnail-project-2-large.webp"
-            width={540}
-            height={400}
-          />
+          <ImageWrapper>
+            <Image
+              style={{ width: '100%', height: 'auto' }}
+              alt=""
+              src="/images/thumbnail-project-2-large.webp"
+              width={540}
+              height={400}
+            />
+            <LinkPanel>
+              <Link href="/">View project</Link>
+              <Link href="/">View code</Link>
+            </LinkPanel>
+          </ImageWrapper>
           <Name>E-learning landing page</Name>
           <Tags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
           </Tags>
-          <Link>View project</Link>
-          <Link>View code</Link>
         </Article>
 
         <Article>
@@ -112,8 +121,8 @@ function Project() {
             <Tag>CSS</Tag>
             <Tag>JavaScript</Tag>
           </Tags>
-          <Link>View project</Link>
-          <Link>View code</Link>
+          <Link href="/">View project</Link>
+          <Link href="/">View code</Link>
         </Article>
       </ProjectGrid>
     </Wrapper>
@@ -161,6 +170,11 @@ const Button = styled.button`
 
   color: var(--white);
   border-bottom: 2px solid var(--green);
+
+  &:hover {
+    color: var(--green);
+    cursor: pointer;
+  }
 `;
 
 const ProjectGrid = styled.div`
@@ -177,14 +191,62 @@ const Article = styled.article`
   gap: 20px;
 `;
 
+const ImageWrapper = styled.div`
+  position: relative;
+
+  &:hover {
+    & > img {
+      opacity: 0.3;
+    }
+
+    & > div {
+      display: revert;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 160px;
+      height: 160px;
+      margin: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    & > div > a {
+      display: revert;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+`;
+
 const Name = styled.p`
   font-size: var(--font-size-heading-medium);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 `;
 
+const LinkPanel = styled.div`
+  display: none;
+`;
+
 const Link = styled.a`
   display: none;
+  text-decoration: none;
+  font-size: var(--font-size-text-medium);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--green);
+  color: var(--white);
+
+  &:hover {
+    color: var(--green);
+  }
 `;
 
 const Tags = styled.ul`

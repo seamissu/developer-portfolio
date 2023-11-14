@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Experience from '@/components/Experience';
 import Project from '@/components/Project';
 import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <Experience />
         <Project />
         <ContactForm />
-        <footer>footer</footer>
+        <Footer />
       </Wrapper>
 
       <GlobalStyles />
@@ -48,6 +49,7 @@ const Wrapper = styled.div`
   & > section {
     border: 2px solid green;
   }
+
   & > main {
     border: 2px solid deeppink;
   }
@@ -58,9 +60,5 @@ const Wrapper = styled.div`
 
   & > footer {
     border: 2px solid navy;
-  }
-
-  & > footer {
-    grid-area: footer;
   }
 `;
