@@ -62,7 +62,7 @@ const Wrapper = styled.div`
   }
 
   // borders for development
-  & > header {
+  /* & > header {
     border: 2px solid red;
   }
 
@@ -80,5 +80,5 @@ const Wrapper = styled.div`
 
   & > footer {
     border: 2px solid navy;
-  }
+  } */
 `;

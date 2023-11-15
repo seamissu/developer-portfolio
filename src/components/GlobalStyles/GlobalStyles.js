@@ -98,13 +98,12 @@ h6 {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  z-index: 2;
 
   top: -20px;
   }
 
 }
-
-
 
 }
 
@@ -121,6 +120,13 @@ h6 {
   }
 }
 
+@media ${QUERIES.mobileAndDown} {
+  .circle.pattern {
+    right: -90px;
+    bottom: 350px;
+  }
+
+}
 
 .rings.header {
   position: absolute;
@@ -132,6 +138,14 @@ h6 {
   .rings.header {
     left: -300px;
     top: 80px;
+  }
+}
+
+@media ${QUERIES.mobileAndDown} {
+  .rings.header {
+    z-index: 1;
+    left: -180px;
+    top: 100px;
   }
 }
 
@@ -148,6 +162,14 @@ h6 {
   }
 }
 
+@media ${QUERIES.mobileAndDown} {
+  .rings.experience {
+    right: -50%;
+    bottom: -65px;
+  }
+}
+
+
 .rings.contactform {
   position: absolute;
   left: -200px;
@@ -161,7 +183,12 @@ h6 {
   }
 }
 
-
+@media ${QUERIES.mobileAndDown} {
+  .rings.contactform {
+    left: -50%;
+    bottom: 88px;
+  }
+}
 
 :root {
   --black: hsl(0deg 0% 8%);
