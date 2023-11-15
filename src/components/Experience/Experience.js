@@ -59,8 +59,17 @@ const Wrapper = styled.section`
 
   margin-top: 70px;
   margin-bottom: 80px;
-
   position: relative;
+
+  @media ${QUERIES.mobileAndDown} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 70px);
+    justify-content: center;
+    justify-items: center;
+    gap: 24px;
+
+    border-bottom: 1px solid var(--white);
+  }
 `;
 
 const Heading = styled.h2`
@@ -71,12 +80,23 @@ const Heading = styled.h2`
   @media ${QUERIES.tabletAndDown} {
     font-size: 40px;
   }
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: 32px;
+    letter-spacing: -1px;
+    text-align: center;
+  }
 `;
 
 const Duration = styled.p`
   color: var(--gray);
   font-size: var(--font-size-text-large);
   font-weight: var(--font-weight-medium);
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: var(--font-size-text-medium);
+    text-align: center;
+  }
 `;
 
 export default Experience;
