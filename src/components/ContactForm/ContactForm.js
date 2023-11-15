@@ -70,6 +70,16 @@ const Wrapper = styled.div`
     align-content: revert;
   }
 
+  @media ${QUERIES.mobileAndDown} {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 190px 1fr;
+    gap: 0px;
+  }
+
   position: relative;
 `;
 
@@ -79,6 +89,10 @@ const ContactInfo = styled.div`
 
   @media ${QUERIES.tabletAndDown} {
     align-items: center;
+  }
+
+  @media ${QUERIES.mobileAndDown} {
+    gap: 20px;
   }
 `;
 
@@ -90,6 +104,12 @@ const Heading = styled.h1`
 
   @media ${QUERIES.tabletAndDown} {
     font-size: 72px;
+  }
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
   }
 `;
 
@@ -103,6 +123,11 @@ const Prompt = styled.p`
   @media ${QUERIES.tabletAndDown} {
     text-align: center;
   }
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: var(--font-size-text-medium);
+    line-height: 26px;
+  }
 `;
 
 const Form = styled.form`
@@ -110,6 +135,10 @@ const Form = styled.form`
   flex-direction: column;
   gap: 40px;
   padding-top: 30px;
+
+  @media ${QUERIES.mobileAndDown} {
+    padding-top: 0px;
+  }
 `;
 
 const Label = styled.label`

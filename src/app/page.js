@@ -58,7 +58,7 @@ const Wrapper = styled.div`
     padding-right: 16px;
     padding-top: 20px;
 
-    grid-template-rows: 720px 740px 1fr 750px 120px;
+    grid-template-rows: 720px 740px 1fr 680px 180px;
   }
 
   // borders for development

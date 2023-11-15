@@ -180,8 +180,11 @@ const Wrapper = styled.main`
     'project';
   grid-template-rows: 90px 1fr;
   gap: 80px;
-
   margin-bottom: 80px;
+
+  @media ${QUERIES.mobileAndDown} {
+    gap: 40px;
+  }
 `;
 
 const Title = styled.div`
@@ -199,6 +202,12 @@ const Heading = styled.h1`
 
   @media ${QUERIES.tabletAndDown} {
     font-size: 72px;
+  }
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
   }
 `;
 
@@ -232,6 +241,12 @@ const ProjectGrid = styled.div`
 
   @media ${QUERIES.tabletAndDown} {
     gap: 60px 20px;
+  }
+
+  @media ${QUERIES.mobileAndDown} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 40px;
   }
 `;
 
