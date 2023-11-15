@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 import { QUERIES } from '@/app/constants';
 
-function Project() {
+function Project({ executeScroll }) {
   return (
     <Wrapper>
       <Title>
         <Heading>Projects</Heading>
-        <Button>Contact me</Button>
+        <Button onClick={executeScroll}>Contact me</Button>
       </Title>
       <ProjectGrid>
         <Article>

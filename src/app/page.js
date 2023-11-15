@@ -2,6 +2,7 @@
 
 import styled from 'styled-components';
 import GlobalStyles from '@/components/GlobalStyles';
+import React from 'react';
 
 import Header from '@/components/Header';
 import Experience from '@/components/Experience';
@@ -12,13 +13,19 @@ import Footer from '@/components/Footer';
 import { QUERIES } from './constants';
 
 export default function Home() {
+  const formRef = React.useRef(null);
+
+  function executeScroll() {
+    formRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
       <Wrapper>
-        <Header />
+        <Header executeScroll={executeScroll} />
         <Experience />
-        <Project />
-        <ContactForm />
+        <Project executeScroll={executeScroll} />
+        <ContactForm formRef={formRef} />
         <Footer />
       </Wrapper>
 
@@ -60,25 +67,4 @@ const Wrapper = styled.div`
 
     grid-template-rows: 720px 740px 1fr 680px 180px;
   }
-
-  // borders for development
-  /* & > header {
-    border: 2px solid red;
-  }
-
-  & > section {
-    border: 2px solid green;
-  }
-
-  & > main {
-    border: 2px solid deeppink;
-  }
-
-  & > div {
-    border: 2px solid yellow;
-  }
-
-  & > footer {
-    border: 2px solid navy;
-  } */
 `;

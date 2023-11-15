@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { QUERIES } from '@/app/constants';
 
-function ContactForm() {
+function ContactForm({ formRef }) {
   return (
     <Wrapper>
       <ContactInfo>
@@ -15,7 +15,7 @@ function ContactForm() {
           soon as possible.
         </Prompt>
       </ContactInfo>
-      <Form>
+      <Form ref={formRef}>
         <Label>
           Name
           <Input required={true} type="text" />

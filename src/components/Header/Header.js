@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { QUERIES } from '@/app/constants';
 
-function Header() {
+function Header({ executeScroll }) {
   return (
     <Wrapper>
       <Image
@@ -70,7 +70,7 @@ function Header() {
             "Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love."
           }
         </Intro>
-        <Button>Contact me</Button>
+        <Button onClick={executeScroll}>Contact me</Button>
       </Hero>
       <Image
         className="circle pattern"
