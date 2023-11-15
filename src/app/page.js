@@ -53,6 +53,14 @@ const Wrapper = styled.div`
     grid-template-rows: 650px 560px 1fr 750px 120px;
   }
 
+  @media ${QUERIES.mobileAndDown} {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 20px;
+
+    grid-template-rows: 720px 560px 1fr 750px 120px;
+  }
+
   // borders for development
   & > header {
     border: 2px solid red;

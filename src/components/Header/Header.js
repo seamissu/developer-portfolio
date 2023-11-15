@@ -109,6 +109,13 @@ const Superheader = styled.nav`
     margin-bottom: 90px;
     padding-right: revert;
   }
+
+  @media ${QUERIES.mobileAndDown} {
+    justify-content: revert;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 310px;
+  }
 `;
 
 const Logo = styled.p`
@@ -134,6 +141,11 @@ const Hero = styled.div`
   @media ${QUERIES.tabletAndDown} {
     gap: 34px;
   }
+
+  @media ${QUERIES.mobileAndDown} {
+    gap: 24px;
+    align-items: center;
+  }
 `;
 
 const HelloHeading = styled.h1`
@@ -152,10 +164,25 @@ const HelloHeading = styled.h1`
       display: table;
     }
   }
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    max-width: 340px;
+
+    & > span {
+      display: revert;
+    }
+  }
 `;
 
 const Namespan = styled.span`
   border-bottom: 6px solid var(--green);
+
+  @media ${QUERIES.mobileAndDown} {
+    border-bottom: 4px solid var(--green);
+  }
 `;
 
 const Intro = styled.p`
@@ -164,6 +191,12 @@ const Intro = styled.p`
   line-height: 28px;
   color: var(--gray);
   max-width: 450px;
+
+  @media ${QUERIES.mobileAndDown} {
+    font-size: var(--font-size-text-medium);
+    line-height: 26px;
+    text-align: center;
+  }
 `;
 
 const Button = styled.button`
@@ -181,6 +214,10 @@ const Button = styled.button`
   &:hover {
     color: var(--green);
     cursor: pointer;
+  }
+
+  @media ${QUERIES.mobileAndDown} {
+    padding-bottom: 6px;
   }
 `;
 

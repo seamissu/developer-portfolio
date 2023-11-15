@@ -82,6 +82,30 @@ h6 {
   right: -30px;
 }
 
+@media ${QUERIES.mobileAndDown} {
+  .profile.desktop {
+    display: none;
+  }
+
+  .profile.tablet {
+    display: none;
+  }
+
+  .profile.mobile {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  top: -20px;
+  }
+
+}
+
+
+
 }
 
 .circle.pattern {
