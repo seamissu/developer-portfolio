@@ -171,7 +171,7 @@ function Project({ executeScroll }) {
   );
 }
 
-const Wrapper = styled.main`
+const Wrapper = styled.div`
   grid-area: projects;
   color: var(--white);
   display: grid;

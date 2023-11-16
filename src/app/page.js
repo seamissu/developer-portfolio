@@ -34,7 +34,7 @@ export default function Home() {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   display: grid;
   min-height: 100%;
   background-color: var(--black);
