@@ -237,7 +237,7 @@ const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 70px 48px;
+  gap: 78px 30px;
 
   @media ${QUERIES.tabletAndDown} {
     gap: 60px 20px;

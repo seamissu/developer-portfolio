@@ -110,7 +110,7 @@ h6 {
 .circle.pattern {
   position: absolute;
   right: 380px;
-  bottom: 170px
+  bottom: 190px;
 }
 
 @media ${QUERIES.tabletAndDown} {
