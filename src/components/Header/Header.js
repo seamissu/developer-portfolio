@@ -4,6 +4,11 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { QUERIES } from '@/app/constants';
 
+import GithubIcon from '../GithubIcon';
+import MentorIcon from '../MentorIcon';
+import LinkedinIcon from '../LinkedinIcon';
+import TwitterIcon from '../TwitterIcon';
+
 function Header({ executeScroll }) {
   return (
     <Wrapper>
@@ -30,33 +35,12 @@ function Header({ executeScroll }) {
       />
       <Superheader>
         <Logo>adamkeyes</Logo>
-        <Imagewrapper>
-          <Image
-            src="/images/icon-github.svg"
-            alt="github logo"
-            width={25}
-            height={24}
-          />
-          <Image
-            src="/images/icon-frontend-mentor.svg"
-            alt="frontend mentor logo"
-            width={26}
-            height={23}
-          />
-          <Image
-            src="/images/icon-linkedin.svg"
-            alt="linkedin logo"
-            width={25}
-            height={24}
-          />
-
-          <Image
-            src="/images/icon-twitter.svg"
-            alt="twitter logo"
-            width={24}
-            height={20}
-          />
-        </Imagewrapper>
+        <IconWrapper>
+          <GithubIcon />
+          <MentorIcon />
+          <LinkedinIcon />
+          <TwitterIcon />
+        </IconWrapper>
       </Superheader>
       <Hero>
         <HelloHeading>
@@ -124,10 +108,12 @@ const Logo = styled.p`
   color: var(--white);
 `;
 
-const Imagewrapper = styled.div`
+const IconWrapper = styled.div`
   display: flex;
   gap: 30px;
   align-items: center;
+  position: relative;
+  z-index: 3;
 `;
 
 const Hero = styled.div`
