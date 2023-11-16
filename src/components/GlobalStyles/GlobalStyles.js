@@ -49,7 +49,7 @@ h6 {
 
 .profile.desktop {
   position: absolute;
-  top: 0px;
+  top: -40px;
   right: 0px;
 }
 

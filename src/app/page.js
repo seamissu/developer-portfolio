@@ -46,7 +46,7 @@ const Wrapper = styled.main`
     'projects'
     'form'
     'footer';
-  grid-template-rows: 820px 400px 1fr 500px 180px;
+  grid-template-rows: 800px 400px 1fr 500px 180px;
 
   padding-left: 160px;
   padding-right: 160px;
